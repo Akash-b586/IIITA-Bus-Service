@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="aos-by-red.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script >
+      window.onload=function(){//from ww  w . j  a  va2s. c  o  m
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementsByName("date_book")[0].setAttribute('min', today);
+      }
+  
+        </script> 
+    <title>IIITA BUS SERVICE</title>
+  </head>
+ 
+  <body>
+    <nav>
+      <div class="navi"> 
+        <div class="im">
+          <img src="/images/bus.jpg" alt="logo" />
+        </div>
+        <div class="head">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="/ticket">ticket</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bus" id="bus">
+        <div class="upper" id="upper">
+          <img src="/images/16518.png" alt="bus" />
+        </div>
+      </div>
+    </nav>
+
+    <div class="contain">
+      <div
+        class="card"
+        id="first"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      > 
+        <img src="/images/1.jpg" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Check Available Seats</h5>
+         
+            <form action="action5" method="post">
+              <p class="card-text">
+                <label class="form-label" for="form2Example22">To :</label>
+                <select name="drop_point" class="places">
+                  <option value="op" name="drop_point"><%= title1 %> </option>
+                  <option value="Institute" name="drop_point">Institute</option>
+                  <option value="City" name="drop_point">City</option>
+                  <span id="message1" style="color:red"> </span>
+                 
+              </select>
+            <input type="date" id="txtName" class="form-control"  min="<?= date('Y-m-d'); ?>" name="date_book" placeholder="dd/mm/yyyy" value=" <%= title3 %> " required />
+            <select name="departure_time" class="places1">
+              <option value="op" name="departure_time"> <%= title2 %> </option>
+              <option value="3:30 PM" name="departure_time">3:30 PM</option>
+              <option value="4:15 PM" name="departure_time">4:15 PM</option>
+              <option value="5:50 PM" name="departure_time">5:50 PM</option>
+              <option value="6:30 PM" name="departure_time">6:30 PM</option>
+              <option value="8:00 PM" name="departure_time">8:00 PM</option>
+              <option value="8:45 PM" name="departure_time">8:45 PM</option>            
+              <option value="9:00 PM" name="departure_time">9:00 PM</option>
+              <span id="message3" style="color:red"> </span>
+          </select>
+        </p>
+        <p>
+        <span id="message" style="color:red"></span>
+        <span id="message4" style="color:red"><%= title %> </span>
+        </p>
+          <button onclick="Validate1()" type="submit" value="submit" id="check" class="btn btn-primary">Check</button>
+          
+        </form>
+     
+        </div>
+      </div>
+      <div
+        class="card"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+        <img src="/images/2.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Schedule</h5>
+          <p class="card-text">
+            Check The TimeTable of the Bus Service.
+          </p>
+          <a href="/timetable" class="btn btn-primary">Check</a>
+        </div>
+      </div>
+      <div
+        class="card"
+        id="third"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+        <img src="/images/3.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Cancelation Of ticket</h5>
+          <p class="card-text">
+            Cancel Your Ticket.
+          </p>
+          <a href="/cancel" class="btn btn-primary">Go Here</a>
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <div class="container">
+        <h1 id="about">BUS SERVICE</h1>
+        <p>
+          IIITA travelling is an Indian online bus ticketing platform, providing ticket booking facility through its website. Headquartered in Allahabad, it connects bus travellers with a network of more than 200 bus operators across Allahabad, Madhya Pradesh travelling is an Indian online bus ticketing platform, providing ticket booking facility through its website. Headquartered in Allahabad, it connects bus travellers with a network of more than operators across Allahabad, Madhya Pradesh.travelling is an Indian online bus ticketing platform, providing ticket booking facility through its website. Headquartered in Allahabad, it connects bus travellers with a network of more than operators across Allahabad, Madhya Pradesh. travelling is an Indian online bus ticketing platform, providing ticket booking facility through its website. Headquartered in Allahabad, it connects bus travellers with a network of more than 20 bus operators across collage, Allahabad.
+        </p>
+      </div>
+    </div>
+    <section class="parallax">
+      <div class="ban">
+        <!-- <h1>PARALLAX</h1> -->
+      </div>
+    </section>
+    <div class="text2" id="extraservice">
+      <div class="container">
+        <h1>Extra Services</h1>
+         
+Indian Institute Of Information Techonology Allahabad is a "Mini Bus-application (Category-I)” Central Public Sector Enterprise under Ministry of DSA, DSA of our collage. as an extended arm of the NATIONAL IMPORTANCE to upgrade, professionalize and manage the catering and hospitality services at stations, on trains and other locations and to promote domestic and international tourism through development of budget hotels, special tour packages, information & commercial publicity and global reservation systems. The authorized capital of the companys and paid up capital , fully subscribed by Ministry of DSA, Government of our collage. It's registered and Corporate Office is situated at Allahabad.
+<br><br>
+<h1>Objective</h1>
+<br>
+<p>(1) To be a customer friendly company through constant innovation, technology driven and human resource development.</p>
+<p>(2) Helps the Students as well as faculty member for booking the ticket at anywhere fron anywhere withour standing in the long line.</p>
+<p>(3) Upgrade and consolidate catering services in the organized sector.</p>
+<p>(4) Expand areas of core competencies, enhance business opportunities through efficient public - private partnerships to maximize generation of resources.</p>
+<p>(5) Concern for the environment and heritage.</p>
+      </div>
+    </div>
+    <!-- <div class="foot">
+      <div class="photo">
+        <div class="photo1 ss">
+          <img src="/images/shubh.jpg" alt="">
+        </div>
+        <div class="photo1 photo2">
+          <img src="/images/soham.jpg" alt="">
+        </div>
+        <div class="photo1 ss">
+          <img src="/images/somil.jpg" alt="">
+        </div>
+      </div> 
+    </div> -->
+
+    <footer class="text-center text-white" style="background-color:#3c0d89;">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+    
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-twitter"></i>
+          </a>
+    
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-google"></i>
+          </a>
+    
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-instagram"></i>
+          </a>
+    
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-linkedin"></i>
+          </a>
+    
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="fab fa-github"></i>
+          </a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright <br><br>
+        <a class="text-white" >IIITA TRAVELLING TEAM</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+
+
+    <script src="/javascripts/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/javascripts/seats.js"></script>
+  </body>
+</html>
